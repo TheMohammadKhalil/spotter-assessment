@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.map-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  background: #dbe7f3;
+}
+
+.map-canvas {
+  width: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  background: #dbe7f3;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+.custom-marker span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgb(15 23 42 / 24%);
+}
+
+.daily-log-paper {
+  page-break-inside: avoid;
+}
+
+
+.daily-log-svg {
+  display: block;
+  width: 100%;
+  max-width: 1120px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #c6d0dc;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.svg-title {
+  font: 800 25px Arial, sans-serif;
+  fill: #111827;
+}
+
+.svg-kicker {
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: 1px;
+  fill: #475569;
+}
+
+.svg-label,
+.svg-row-label {
+  font: 700 13px Arial, sans-serif;
+  fill: #111827;
+}
+
+.svg-small {
+  font: 12px Arial, sans-serif;
+  fill: #111827;
+}
+
+.svg-small-bold {
+  font: 700 12px Arial, sans-serif;
+  fill: #111827;
+}
+
+.svg-tiny {
+  font: 10px Arial, sans-serif;
+  fill: #111827;
+}
+
+.svg-remark-heading {
+  font: 700 9.5px Arial, sans-serif;
+  letter-spacing: 0.6px;
+  fill: #64748b;
+}
+
+.svg-remark-time {
+  font: 700 12px Arial, sans-serif;
+  fill: #0f172a;
+}
+
+.svg-remark-status {
+  font: 700 11px Arial, sans-serif;
+}
+
+.svg-remark-detail {
+  font: 11.5px Arial, sans-serif;
+  fill: #1f2937;
+}
+
+.svg-time-header {
+  font: 700 10px Arial, sans-serif;
+  fill: #ffffff;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.svg-time-boundary {
+  font-size: 8px;
+}
+
+@media (max-width: 1024px) {
+  .map-canvas {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 900px) {
+  .map-canvas {
+    min-height: 300px;
+  }
+
+  .daily-log-svg {
+    width: 1080px;
+    max-width: none;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+
+  .daily-log-paper {
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .daily-log-svg {
+    width: 100%;
+    max-width: none;
+    border: 1px solid #111827;
+    border-radius: 0;
+  }
+}
